@@ -1,0 +1,17 @@
+name: Add Code Review Label
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add 'code review' label with custom JS action
+        uses: senick/add-label-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
