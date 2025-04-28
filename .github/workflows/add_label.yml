@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Add 'code review' label with custom JS action
-        uses: senick/add-label-action@v1
+        uses: senick/add-label-action@v1.0.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
